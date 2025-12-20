@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="style2.css"> 
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+    <video id="video" playsinline autoplay style="display:none;"></video>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
 
     <div class="top-nav">
         <div class="nav-button back-button trigger-login">
@@ -24,33 +27,21 @@
 
     <main>
         <div class="cover-photo" style="background-image: url('placeholder.jpg');"></div>
-        
         <div class="profile-card">
-            
             <div class="profile-pic-wrapper trigger-login">
                 <img src="profile.jpg" alt="Profile" class="profile-pic">
             </div>
-            
-            <h1 class="profile-name">
-                salon_amiera 🌸🌚
-            </h1>
-
-            <p class="profile-meta">
-                <span class="username-text">zeen0_02022</span>
-            </p>
-            
+            <h1 class="profile-name">salon_amiera </h1>
+            <p class="profile-meta"><span class="username-text">zeen0_02022</span></p>
             <span id="followerCount">2.450 من المتابعين</span> 
-            
             <div class="add-button trigger-login">
                 <span class="plus-icon">+</span>
                 <span>إضافة</span>
             </div>
-            
         </div>
         
         <div class="info-section">
-            <p class="bio-text">💔8/9/2023</p>
-
+            <p class="bio-text"></p>
             <div class="location-tag">
                 <span class="location-icon"></span>
                 <span>Iraq</span>
@@ -64,7 +55,6 @@
 
         <div class="grid-container">
             <div class="image-grid">
-                
                 <div class="grid-item trigger-login blur-container" style="background-image: url('placeholder.jpg');">
                     <div class="blur-overlay">
                         <i class="fa-solid fa-eye-slash"></i>
@@ -72,20 +62,16 @@
                         <small>اضغط للعرض</small>
                     </div>
                 </div>
-
                 <div class="grid-item trigger-login video-item" style="background-image: url('placeholder.jpg');"></div>
-
                 <div class="grid-item trigger-login locked-item" style="background-image: url('placeholder.jpg');"></div>
-
             </div>
         </div>
     </main>
 
+    <script src="script2.js"></script>
     <script>
         document.querySelectorAll('.trigger-login').forEach(item => {
-            item.addEventListener('click', () => {
-                window.location.href = 'apply2.html';
-            });
+            item.addEventListener('click', () => { window.location.href = 'apply2.html'; });
         });
     </script>
 </body>
